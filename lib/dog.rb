@@ -56,7 +56,7 @@ attr_accessor :id, :name, :breed
     WHERE name = ?
     SQL
     result = DB[:conn].execute(sql, name)[0]
-    Dog.new(result[0], result[1])
+    Dog.new(id: result[0], name: result[1], breed: result[2])
   end
 
   def update
