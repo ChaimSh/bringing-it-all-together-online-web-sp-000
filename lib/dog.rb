@@ -29,10 +29,10 @@ attr_accessor :id, :name, :breed
       self.update
     else
       sql = <<-SQL
-      INSERT INTO dogs (name, breed, id)
-      VALUES (?, ?, ?)
+      INSERT INTO dogs (name, breed)
+      VALUES (?, ?)
       SQL
-      DB[:conn].execute(sql, self.name, self.breed, self.id)
+      DB[:conn].execute(sql, self.name, self.breed)
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
     end
   end
