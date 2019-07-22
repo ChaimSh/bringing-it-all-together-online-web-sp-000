@@ -49,7 +49,7 @@ attr_accessor :id, :name, :breed
   end
 
   def self.find_by_id
-    
+
   end
 
   def self.find_by_name(name)
