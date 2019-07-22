@@ -57,7 +57,7 @@ attr_accessor :id, :name, :breed
     LIMIT 1
     SQL
 
-    DB[:conn].execute(sql, name) 
+    DB[:conn].execute(sql, name)
   end
 
   def update
